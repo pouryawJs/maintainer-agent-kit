@@ -1,12 +1,9 @@
 import type { IssueLike, MaintainerAgentConfig, TriageResult } from './types';
+import { matchLabels } from './matcher';
 
-export function triageIssue(
+export async function triageIssue(
   _issue: IssueLike,
   _config: MaintainerAgentConfig
-): TriageResult {
-  // TODO: Combine label matching and good-first-issue hints.
-  return {
-    labelsToAdd: [],
-    matchedRules: []
-  };
+): Promise<TriageResult> {
+  return matchLabels(_issue, _config);
 }
