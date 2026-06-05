@@ -1,17 +1,12 @@
-import type { IssueInput, MaintainerAgentConfig } from './types';
-
-export interface TriageResult {
-  labels: string[];
-  reason: string;
-}
+import type { IssueLike, MaintainerAgentConfig, TriageResult } from './types';
 
 export function triageIssue(
-  _issue: IssueInput,
+  _issue: IssueLike,
   _config: MaintainerAgentConfig
 ): TriageResult {
   // TODO: Combine label matching and good-first-issue hints.
   return {
-    labels: [],
-    reason: 'Triage engine is not implemented yet.'
+    labelsToAdd: [],
+    matchedRules: []
   };
 }

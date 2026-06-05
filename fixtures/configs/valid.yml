@@ -1,0 +1,19 @@
+labels:
+  bug:
+    include:
+      - bug
+      - crash
+  docs:
+    include:
+      - docs
+      - readme
+
+goodFirstIssue:
+  labels:
+    - good first issue
+  include:
+    - docs
+
+releaseNotes:
+  groupByLabels:
+    bug: Bug Fixes

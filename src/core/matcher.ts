@@ -1,7 +1,7 @@
-import type { IssueInput, MaintainerAgentConfig } from './types';
+import type { IssueLike, MaintainerAgentConfig } from './types';
 
 export function matchLabels(
-  _issue: IssueInput,
+  _issue: IssueLike,
   _config: MaintainerAgentConfig
 ): string[] {
   // TODO: Implement keyword matching and exclusion rules.

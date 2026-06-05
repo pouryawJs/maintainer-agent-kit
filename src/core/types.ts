@@ -1,35 +1,45 @@
-export interface LabelRule {
+export type LabelRule = {
   include: string[];
-  exclude?: string[];
-}
+};
 
-export interface GoodFirstIssueConfig {
+export type GoodFirstIssueConfig = {
   enabled: boolean;
   labels: string[];
   include: string[];
-}
+};
 
-export interface ReleaseNotesConfig {
+export type ReleaseNotesConfig = {
   title: string;
   groupByLabels: Record<string, string>;
   includePullRequestLinks: boolean;
-}
+};
 
-export interface MaintainerAgentConfig {
+export type MaintainerAgentConfig = {
   labels: Record<string, LabelRule>;
   goodFirstIssue?: GoodFirstIssueConfig;
   releaseNotes?: ReleaseNotesConfig;
-}
+};
 
-export interface IssueInput {
+export type IssueLike = {
+  number?: number;
   title: string;
   body?: string | null;
   labels?: string[];
-}
+};
 
-export interface PullRequestInput {
+export type TriageResult = {
+  labelsToAdd: string[];
+  matchedRules: Array<{
+    label: string;
+    matchedKeywords: string[];
+  }>;
+};
+
+export type PullRequestLike = {
   number: number;
   title: string;
   url?: string;
-  labels?: string[];
-}
+  labels: string[];
+  mergedAt?: string;
+  author?: string;
+};

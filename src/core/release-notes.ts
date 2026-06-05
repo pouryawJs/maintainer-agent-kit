@@ -1,7 +1,7 @@
-import type { MaintainerAgentConfig, PullRequestInput } from './types';
+import type { MaintainerAgentConfig, PullRequestLike } from './types';
 
 export function generateReleaseNotes(
-  _pullRequests: PullRequestInput[],
+  _pullRequests: PullRequestLike[],
   _config: MaintainerAgentConfig
 ): string {
   // TODO: Group merged pull requests by configured labels.
