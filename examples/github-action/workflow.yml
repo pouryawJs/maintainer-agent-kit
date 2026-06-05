@@ -4,9 +4,19 @@ on:
   issues:
     types: [opened, edited]
 
+permissions:
+  issues: write
+  contents: read
+
 jobs:
-  maintainer-agent-kit:
+  triage:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./
+      - uses: pouryawJs/maintainer-agent-kit@v0.1.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          config: .maintainer-agent.yml
+          mode: triage
+          dry-run: 'false'

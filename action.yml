@@ -1,6 +1,21 @@
 name: Maintainer Agent Kit
-description: Placeholder GitHub Action for maintainer-agent-kit.
-author: maintainer-agent-kit
+description: Rule-based automation toolkit for OSS maintainers
+author: pouryawJs
+
+inputs:
+  config:
+    description: Path to .maintainer-agent.yml
+    required: false
+    default: .maintainer-agent.yml
+  mode:
+    description: Automation mode. MVP supports only triage.
+    required: false
+    default: triage
+  dry-run:
+    description: Print labels without applying them.
+    required: false
+    default: 'false'
+
 runs:
   using: node20
   main: dist/action.js

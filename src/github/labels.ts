@@ -1,5 +1,30 @@
-export async function applyLabels(_issueNumber: number, _labels: string[]): Promise<void> {
-  // TODO: Use @actions/github to apply labels in the GitHub Action phase.
-  void _issueNumber;
-  void _labels;
+import * as github from '@actions/github';
+
+type AddLabelsToIssueParams = {
+  token: string;
+  owner: string;
+  repo: string;
+  issueNumber: number;
+  labels: string[];
+};
+
+export async function addLabelsToIssue({
+  token,
+  owner,
+  repo,
+  issueNumber,
+  labels
+}: AddLabelsToIssueParams): Promise<void> {
+  if (labels.length === 0) {
+    return;
+  }
+
+  const octokit = github.getOctokit(token);
+
+  await octokit.rest.issues.addLabels({
+    owner,
+    repo,
+    issue_number: issueNumber,
+    labels
+  });
 }
