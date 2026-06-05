@@ -12,7 +12,8 @@
   "files": [
     "dist",
     "action.yml",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsup",
@@ -25,12 +26,29 @@
   },
   "keywords": [
     "github-action",
+    "github-actions",
+    "typescript",
+    "nodejs",
+    "cli",
+    "open-source",
+    "oss",
     "maintainers",
-    "triage",
-    "release-notes"
+    "automation",
+    "issue-triage",
+    "issue-labeling",
+    "release-notes",
+    "developer-tools"
   ],
-  "author": "",
+  "author": "Pourya Poursalehi",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pouryawJs/maintainer-agent-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pouryawJs/maintainer-agent-kit/issues"
+  },
+  "homepage": "https://github.com/pouryawJs/maintainer-agent-kit#readme",
   "dependencies": {
     "@actions/core": "^1.11.1",
     "@actions/github": "^6.0.1",
@@ -47,8 +65,8 @@
     "eslint": "^9.17.0",
     "prettier": "^3.4.2",
     "tsup": "^8.3.5",
-    "typescript-eslint": "^8.18.2",
     "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.2",
     "vitest": "^2.1.8"
   },
   "engines": {
