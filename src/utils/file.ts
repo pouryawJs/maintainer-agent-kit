@@ -8,6 +8,10 @@ export async function readTextFile(path: string): Promise<string> {
   return fs.readFile(path, 'utf8');
 }
 
+export async function writeTextFile(path: string, content: string): Promise<void> {
+  await fs.outputFile(path, content, 'utf8');
+}
+
 export async function readJsonFile<T>(path: string): Promise<T> {
   return fs.readJson(path) as Promise<T>;
 }
