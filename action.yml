@@ -1,0 +1,6 @@
+name: Maintainer Agent Kit
+description: Placeholder GitHub Action for maintainer-agent-kit.
+author: maintainer-agent-kit
+runs:
+  using: node20
+  main: dist/action.js

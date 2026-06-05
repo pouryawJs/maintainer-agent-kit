@@ -1,0 +1,9 @@
+node_modules/
+dist/
+coverage/
+.nyc_output/
+*.lcov
+.env
+.env.*
+!.env.example
+.codex/

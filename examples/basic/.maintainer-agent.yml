@@ -1,0 +1,51 @@
+labels:
+  bug:
+    include:
+      - bug
+      - error
+      - crash
+      - broken
+      - not working
+
+  feature:
+    include:
+      - feature
+      - request
+      - support
+      - add
+      - implement
+
+  docs:
+    include:
+      - docs
+      - documentation
+      - readme
+      - typo
+
+  question:
+    include:
+      - how do i
+      - question
+      - help
+      - usage
+
+goodFirstIssue:
+  enabled: true
+  labels:
+    - good first issue
+  include:
+    - typo
+    - docs
+    - readme
+    - small
+    - beginner
+    - simple
+
+releaseNotes:
+  title: "Release Notes"
+  groupByLabels:
+    feature: "Features"
+    bug: "Bug Fixes"
+    docs: "Documentation"
+    chore: "Maintenance"
+  includePullRequestLinks: true

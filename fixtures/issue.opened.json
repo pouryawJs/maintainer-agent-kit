@@ -1,0 +1,15 @@
+{
+  "action": "opened",
+  "issue": {
+    "number": 42,
+    "title": "How do I configure labels?",
+    "body": "I need help understanding the basic YAML configuration.",
+    "labels": [],
+    "user": {
+      "login": "new-maintainer"
+    }
+  },
+  "repository": {
+    "full_name": "example/project"
+  }
+}

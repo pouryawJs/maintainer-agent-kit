@@ -1,0 +1,15 @@
+{
+  "action": "opened",
+  "issue": {
+    "number": 108,
+    "title": "App crashes when config file is missing",
+    "body": "The CLI exits unexpectedly instead of showing a friendly validation error.",
+    "labels": [],
+    "user": {
+      "login": "reporter"
+    }
+  },
+  "repository": {
+    "full_name": "example/project"
+  }
+}

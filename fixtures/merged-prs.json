@@ -1,0 +1,16 @@
+[
+  {
+    "number": 12,
+    "title": "Add validation command scaffold",
+    "url": "https://github.com/example/project/pull/12",
+    "labels": ["feature"],
+    "mergedAt": "2026-01-12T10:30:00Z"
+  },
+  {
+    "number": 14,
+    "title": "Fix typo in example workflow",
+    "url": "https://github.com/example/project/pull/14",
+    "labels": ["docs"],
+    "mergedAt": "2026-01-15T16:45:00Z"
+  }
+]
